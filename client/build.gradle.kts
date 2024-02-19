@@ -4,27 +4,22 @@ plugins {
 
 group = "space.insyri"
 version = "1.0-SNAPSHOT"
-val ktorVersion: String by project
+val ktor_version: String by project
 
 repositories {
     mavenCentral()
 }
 
 dependencies {
-    implementation("io.ktor:ktor-client-core:$ktorVersion")
-    implementation("io.ktor:ktor-client-cio:$ktorVersion")
-    implementation("io.ktor:ktor-client-websockets:$ktorVersion")
-    testImplementation("org.jetbrains.kotlin:kotlin-test")
+    implementation("io.ktor:ktor-client-core:$ktor_version")
+    implementation("io.ktor:ktor-client-cio:$ktor_version")
+    implementation("io.ktor:ktor-client-websockets:$ktor_version")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.8.0")
 }
 
 //tasks.named<JavaExec>("run") {
 //    standardInput = System.`in`
 //}
-
-tasks.test {
-    useJUnitPlatform()
-}
 
 kotlin {
     jvmToolchain(8)
