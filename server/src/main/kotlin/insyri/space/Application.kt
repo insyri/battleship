@@ -14,3 +14,7 @@ fun Application.module() {
     configureSockets()
     configureRouting()
 }
+
+object Game {
+
+}
